@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>یک سؤال مهم</title>
+
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #111;
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.box {
+  padding: 30px;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+button {
+  font-size: 22px;
+  padding: 14px 35px;
+  margin: 10px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.yes {
+  background: #28a745;
+  color: white;
+}
+
+.no {
+  background: #555;
+  color: white;
+}
+
+#message {
+  display: none;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1.8;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box" id="question">
+  <h1>آماده‌ای؟ 😎</h1>
+  <button class="yes" onclick="showMessage()">بله ✅</button>
+  <button class="no" onclick="alert('پس دوباره فکر کن 😄')">نه ❌</button>
+</div>
+
+<div id="message">
+  🎉 مبارکه! 🎉<br>
+  به بچه‌های گپ بیست باید بگیم! 🔥
+</div>
+
+<script>
+function showMessage() {
+  document.getElementById("question").style.display = "none";
+  document.getElementById("message").style.display = "block";
+}
+</script>
+
+</body>
+</html>
